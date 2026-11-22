@@ -1,24 +1,14 @@
 # README
+i dont have russian lang on my linux laptop so i have to write whole file in eng, good luck reading allat 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+i created 3 models: student, group, lesson. 
+Student and Lesson has Group foreign key.
 
-Things you may want to cover:
+about API:
+every model has 4 ways to interact (im not sure if im using correct verb) with an api: GET, POST, PATCH, DELETE
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. to see all objects (idk if im naming them right rn actually) example: localhost:3000/api/students
+2. to see exact object example: localhost:3000/api/students/1
+3. to create a new object using curl: curl -X POST localhost:3000/api/students --json '{"name":"Michael", "group_id":1}'
+4. to update already existing object: curl -X PATCH localhost:3000/api/students/5 --json '{"name":"Nikita"}'
+5. to destroy exact object example: curl -X DELETE localhost:3000/api/students/11
